@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "ProductEdit";
 }
-
+@Styles.Render("~/plugins/summernoteStyles")
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
         <h2>Product edit</h2>
@@ -26,10 +26,8 @@
         <div class="col-lg-12">
             <div class="tabs-container">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#tab-1"> Product info</a></li>
-                    <li class=""><a data-toggle="tab" href="#tab-2"> Data</a></li>
-                    <li class=""><a data-toggle="tab" href="#tab-3"> Discount</a></li>
-                    <li class=""><a data-toggle="tab" href="#tab-4"> Images</a></li>
+                    <li class="active"><a data-toggle="tab" href="#tab-1"> Chamado</a></li>
+                    <li class=""><a data-toggle="tab" href="#tab-2"> Anexos</a></li>
                 </ul>
                 <div class="tab-content">
                     <div id="tab-1" class="tab-pane active">
@@ -37,15 +35,11 @@
 
                             <fieldset class="form-horizontal">
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label">Name:</label>
+                                    <label class="col-sm-2 control-label">Título:</label>
                                     <div class="col-sm-10"><input type="text" class="form-control" placeholder="Product name"></div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label">Price:</label>
-                                    <div class="col-sm-10"><input type="text" class="form-control" placeholder="$160.00"></div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">Description:</label>
+                                    <label class="col-sm-2 control-label">Descrição:</label>
                                     <div class="col-sm-10">
                                         <div class="summernote">
                                             <h3>Lorem Ipsum is simply</h3>
@@ -497,11 +491,7 @@
     </div>
 
 </div>
-
-
-    @Styles.Render("~/Content/plugins/summernoteStyles")
-
-    @Scripts.Render("~/Content/plugins/summernote")
+    @Scripts.Render("~/plugins/summernote")
 
     <script type="text/javascript">
         $(document).ready(function () {
