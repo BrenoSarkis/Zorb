@@ -8,6 +8,7 @@
     <title>INSPINIA | @ViewBag.Title</title>
         @Styles.Render("~/Content/css")
         @Styles.Render("~/font-awesome/css")
+    @Styles.Render("~/plugins/summernoteStyles")
 </head>
 <body>
 
@@ -34,13 +35,12 @@
 
     </div>
     <!-- End wrapper-->
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/plugins/metsiMenu")
-        @Scripts.Render("~/plugins/pace")
-        @Scripts.Render("~/plugins/slimScroll")
-        @Scripts.Render("~/bundles/inspinia")
-        @Scripts.Render("~/bundles/bootstrap")
-        @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/plugins/slimScroll")
+    @Scripts.Render("~/bundles/inspinia")
+    @Scripts.Render("~/plugins/summernote")
     @*@RenderSection("scripts", required: true)*@
 </body>
 </html>

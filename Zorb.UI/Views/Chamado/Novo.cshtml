@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "ProductEdit";
 }
-@Styles.Render("~/plugins/summernoteStyles")
+
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
         <h2>Product edit</h2>
@@ -32,40 +32,48 @@
                 <div class="tab-content">
                     <div id="tab-1" class="tab-pane active">
                         <div class="panel-body">
-
                             <fieldset class="form-horizontal">
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label">Título:</label>
-                                    <div class="col-sm-10"><input type="text" class="form-control" placeholder="Product name"></div>
+                                    <div class="col-sm-1 control-label">
+                                    </div>
+                                    <div class="col-sm-10 checkbox checkbox-danger">
+                                        <input id="checkbox6" type="checkbox">
+                                        <label for="checkbox6">
+                                            Urgente?
+                                        </label>
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label">Descrição:</label>
+                                    <label class="col-sm-1 control-label">Setor:</label>
+                                    <div class="col-sm-10">
+                                        <select class="form-control m-b" name="account">
+                                            <option>Selecione...</option>
+                                            <option>option 2</option>
+                                            <option>option 3</option>
+                                            <option>option 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-1 control-label">Título:</label>
+                                    <div class="col-sm-10"><input type="text" class="form-control" placeholder="Descreva brevemente o problema"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-1 control-label">Descrição:</label>
                                     <div class="col-sm-10">
                                         <div class="summernote">
-                                            <h3>Lorem Ipsum is simply</h3>
-                                            dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s,
-                                            when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-                                            when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-                                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-                                            <br />
-
+                                           Use o editor para informar detalhadamente o motivo do chamado.
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label">Meta Tag Title:</label>
-                                    <div class="col-sm-10"><input type="text" class="form-control" placeholder="..."></div>
+                                    <div class="col-sm-1 control-label">
+                                    </div>
+                                    <button type="button" class="btn btn-w-m btn-primary">Salvar</button>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">Meta Tag Description:</label>
-                                    <div class="col-sm-10"><input type="text" class="form-control" placeholder="Sheets containing Lorem"></div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">Meta Tag Keywords:</label>
-                                    <div class="col-sm-10"><input type="text" class="form-control" placeholder="Lorem, Ipsum, has, been"></div>
-                                </div>
-                            </fieldset>
 
+
+                            </fieldset>
                         </div>
                     </div>
                     <div id="tab-2" class="tab-pane">
@@ -489,15 +497,17 @@
             </div>
         </div>
     </div>
-
 </div>
-    @Scripts.Render("~/plugins/summernote")
+@Styles.Render("~/plugins/awesomeCheckboxStyles")
 
-    <script type="text/javascript">
-        $(document).ready(function () {
+@Scripts.Render("~/bundles/jquery")
 
-            $('.summernote').summernote();
 
-        });
+<script type="text/javascript">
+    $(document).ready(function () {
 
-    </script>
+        $('.summernote').summernote();
+
+    });
+
+</script>
